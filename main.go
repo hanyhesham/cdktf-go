@@ -15,7 +15,7 @@ func Dev(scope constructs.Construct, id string) cdktf.TerraformStack {
 	provider.Initprovider(stack, "us-west-1")
 
 	// Create an Ec2 instance
-	ec2.CreateEC2Instance(stack, "t2-micro")
+	ec2.CreateEC2Instance(stack, "t2-micro", "ami-01456a894f71116f2")
 
 	// Create an S3 bucket
 	s3.CreateS3Bucket(stack, "my-unique-bucket-name")
