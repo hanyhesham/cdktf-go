@@ -2,8 +2,9 @@ package main
 
 import (
 	ec2 "cdk.tf/go/stack/ec2"
-	"cdk.tf/go/stack/provider"
+	provider "cdk.tf/go/stack/provider"
 	s3 "cdk.tf/go/stack/s3"
+	vpc "cdk.tf/go/stack/vpc"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
@@ -19,6 +20,9 @@ func Dev(scope constructs.Construct, id string) cdktf.TerraformStack {
 
 	// Create an S3 bucket
 	s3.CreateS3Bucket(stack, "my-unique-bucket-name")
+
+	// Create VPC
+	vpc.CreateVPC(stack, "mydevVPC")
 
 	return stack
 }
