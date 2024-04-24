@@ -10,7 +10,6 @@ require github.com/aws/jsii-runtime-go v1.96.0
 
 require (
 	github.com/Masterminds/semver/v3 v3.2.1 // indirect
-	github.com/cdktf/cdktf-provider-aws-go/aws/v10 v10.0.12 // indirect
 	github.com/cdktf/cdktf-provider-aws-go/aws/v19 v19.14.0 // indirect
 	github.com/fatih/color v1.16.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
