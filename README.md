@@ -1,2 +1,2 @@
 # cdktf-go
-Terraform CDK Go
+Provision AWS resources using CDKTF Go
