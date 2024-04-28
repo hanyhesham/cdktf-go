@@ -1,10 +1,10 @@
 package main
 
 import (
-	ec2 "cdk.tf/go/stack/ec2"
+	"cdk.tf/go/stack/ec2"
 	provider "cdk.tf/go/stack/provider"
 	s3 "cdk.tf/go/stack/s3"
-	vpc "cdk.tf/go/stack/vpc"
+	"cdk.tf/go/stack/vpc"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/aws/jsii-runtime-go"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
@@ -14,9 +14,10 @@ func Dev(scope constructs.Construct, id string) cdktf.TerraformStack {
 	stack := cdktf.NewTerraformStack(scope, &id)
 
 	cdktf.NewS3Backend(stack, &cdktf.S3BackendConfig{
-		Bucket: jsii.String("cdktf-go-backend"),
-		Key:    jsii.String("dev"),
-		Region: jsii.String("us-west-1"),
+		Bucket:        jsii.String("cdktf-go-backend"),
+		Key:           jsii.String("dev"),
+		Region:        jsii.String("us-west-1"),
+		DynamodbTable: jsii.String("cdktf-go-lock"),
 	})
 
 	// Init AWS provider
