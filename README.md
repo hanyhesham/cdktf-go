@@ -1,4 +1,4 @@
-# Implement AWS Services using CDKTF GO with S3 Remote Backend and DynamoDB for state locking
+# Implement AWS Services using CDKTF GO
 
 ## Provider package
 Initialize AWS Provider
