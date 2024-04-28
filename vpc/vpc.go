@@ -11,6 +11,7 @@ func CreateVPC(stack cdktf.TerraformStack, name string) {
 		Tags: &map[string]*string{
 			"Name": jsii.String(name),
 		},
+		CidrBlock: jsii.String("10.0.0.0/24"),
 	})
 
 	cdktf.NewTerraformOutput(stack, jsii.String("VPC ARN"), &cdktf.TerraformOutputConfig{
